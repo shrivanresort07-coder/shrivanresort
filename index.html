@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shrivan Resort | Luxury Stay Near Alibag</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f8f5ef;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:32px;
+font-family:'Playfair Display',serif;
+font-weight:700;
+color:#fff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('images/hero.jpeg') center/cover no-repeat;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:78px;
+font-family:'Playfair Display',serif;
+margin-bottom:20px;
+line-height:1.1;
+}
+
+.hero p{
+font-size:22px;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 32px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-primary{
+background:#d4af37;
+color:white;
+}
+
+.btn-primary:hover{
+background:#b99425;
+transform:translateY(-4px);
+}
+
+.btn-outline{
+border:2px solid white;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:black;
+}
+
+/* SECTIONS */
+
+section{
+padding:110px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:52px;
+font-family:'Playfair Display',serif;
+margin-bottom:15px;
+}
+
+.section-title p{
+color:#666;
+font-size:18px;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+.about-text h3{
+font-size:40px;
+margin-bottom:25px;
+font-family:'Playfair Display',serif;
+}
+
+.about-text p{
+line-height:1.9;
+color:#555;
+font-size:17px;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card-content h3{
+font-size:30px;
+margin-bottom:15px;
+font-family:'Playfair Display',serif;
+}
+
+.price{
+font-size:22px;
+font-weight:600;
+color:#d4af37;
+margin-bottom:12px;
+}
+
+/* DARK SECTION */
+
+.dark{
+background:#1f2c28;
+color:white;
+}
+
+.dark .section-title p{
+color:#ddd;
+}
+
+.amenities{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.amenity{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:0.3s;
+font-size:18px;
+}
+
+.amenity:hover{
+background:#d4af37;
+transform:translateY(-5px);
+}
+
+/* TABLE */
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+th{
+background:#1f2c28;
+color:white;
+padding:20px;
+font-size:18px;
+}
+
+td{
+padding:20px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:22px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* CONTACT */
+
+.contact{
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('images/contact.jpg') center/cover no-repeat;
+
+color:white;
+text-align:center;
+}
+
+.contact h2{
+font-size:58px;
+margin-bottom:25px;
+font-family:'Playfair Display',serif;
+}
+
+.contact p{
+font-size:20px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:#aaa;
+text-align:center;
+padding:25px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:52px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+section{
+padding:90px 6%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">Shrivan Resort</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#rooms">Rooms</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Welcome To Shrivan Resort 🌴</h1>
+
+<p>
+Enjoy a peaceful stay near Alibag with comfortable rooms,
+fun activities, relaxing vibes and unforgettable luxury
+perfect for families and friends getaway.
+</p>
+
+<div class="hero-buttons">
+
+<a href="tel:8280003400" class="btn btn-primary">
+Book Now
+</a>
+
+<a href="https://wa.me/918280003400"
+class="btn btn-outline">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-title">
+
+<h2>Luxury Coastal Escape</h2>
+
+<p>Nature • Comfort • Celebration</p>
+
+</div>
+
+<div class="about">
+
+<img src="images/lawn.jpeg">
+
+<div class="about-text">
+
+<h3>Your Perfect Getaway Near Alibag ✨</h3>
+
+<p>
+Shrivan Resort offers cozy living spaces, modern amenities,
+beautiful outdoor seating, swimming pool experiences,
+fresh homemade food, and peaceful luxury surrounded by nature.
+</p>
+
+<br>
+
+<p>
+Perfect for family vacations, weekend trips,
+corporate retreats, birthdays, anniversaries,
+haldi ceremonies, baby showers, and mehendi functions.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ROOMS -->
+
+<section id="rooms">
+
+<div class="section-title">
+
+<h2>Luxury Rooms</h2>
+
+<p>Elegant comfort designed for relaxation</p>
+
+</div>
+
+<div class="cards">
+
+<!-- STANDARD ROOM -->
+
+<div class="card">
+
+<img src="images/room2.jpeg">
+
+<div class="card-content">
+
+<h3>Standard Room</h3>
+
+<div class="price">
+₹2500 Weekdays<br>
+₹3000 Weekends
+</div>
+
+<p>
+1 Bed Room perfect for 3–4 guests with
+comfortable interiors and peaceful stay experience.
+</p>
+
+</div>
+
+</div>
+
+<!-- DELUXE ROOM -->
+
+<div class="card">
+
+<img src="images/room1.jpeg">
+
+<div class="card-content">
+
+<h3>Deluxe Room</h3>
+
+<div class="price">
+₹3000 Weekdays<br>
+₹3500 Weekends
+</div>
+
+<p>
+2 Bed luxury room ideal for 6–8 guests
+with spacious comfort and premium ambience.
+</p>
+
+</div>
+
+</div>
+
+<!-- 10 BED ROOM -->
+
+<div class="card">
+
+<img src="images/bedroom.jpeg">
+
+<div class="card-content">
+
+<h3>10 Bed Pool View Room</h3>
+
+<div class="price">
+Per Person Charges Applicable
+</div>
+
+<p>
+Large luxury group room for up to 10 guests
+perfect for family trips, celebrations and group stays.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICING SECTION -->
+
+<section id="pricing">
+
+<div class="section-title">
+
+<h2 style="color:white;">
+Package Pricing
+</h2>
+
+<p style="color:#cbd5e1;">
+Affordable luxury for your perfect getaway
+</p>
+
+</div>
+
+<div class="pricing-container">
+
+<!-- PACKAGE PRICING -->
+
+<table class="pricing-table">
+
+<tr>
+<th>Package Type</th>
+<th>Pricing</th>
+</tr>
+
+<tr>
+<td>Weekdays</td>
+<td>₹1199 Per Person</td>
+</tr>
+
+<tr>
+<td>Weekends</td>
+<td>₹1499 Per Person</td>
+</tr>
+
+<tr>
+<td colspan="2">
+If the number of people is 10 or more,
+per person charges will be applicable.
+</td>
+</tr>
+
+</table>
+
+<br><br>
+
+<!-- ROOM TARIFF -->
+
+<table class="pricing-table">
+
+<tr>
+<th>Room Type</th>
+<th>Details</th>
+<th>Pricing</th>
+</tr>
+
+<tr>
+<td>Standard Room</td>
+
+<td>
+1 Bed Room<br>
+Occupancy: 3–4 Guests
+</td>
+
+<td>
+₹2500 Weekdays<br>
+₹3000 Weekends
+</td>
+
+</tr>
+
+<tr>
+<td>Deluxe Room</td>
+
+<td>
+2 Bed Room<br>
+Occupancy: 6–8 Guests
+</td>
+
+<td>
+₹3000 Weekdays<br>
+₹3500 Weekends
+</td>
+
+</tr>
+
+<tr>
+<td>10 Bed Pool View Room</td>
+
+<td>
+Occupancy: 10 Guests
+</td>
+
+<td>
+Per Person Charges Applicable
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<br><br>
+
+<p style="
+text-align:center;
+max-width:900px;
+margin:auto;
+line-height:1.9;
+color:#666;
+font-size:17px;
+">
+
+🍽️ Food charges will be charged according to menu prices.
+
+<br><br>
+
+Enjoy a complimentary daily breakfast during your stay.
+
+<br><br>
+
+⚠️ NON-REFUNDABLE UPON CONFIRMATION.
+
+<br><br>
+
+⚠️ Guests/signing guests will be liable for any damages caused to resort properties.
+
+</p>
+
+</section>
+
+<!-- AMENITIES -->
+
+<section class="dark">
+
+<div class="section-title">
+
+<h2>Amenities Available</h2>
+
+<p>Everything you need for a relaxing stay</p>
+
+</div>
+
+<div class="amenities">
+
+<div class="amenity">📶 Free WiFi</div>
+
+<div class="amenity">🚗 Free Parking</div>
+
+<div class="amenity">🌿 Gazebo Sitting Area</div>
+
+<div class="amenity">🏸 Indoor Badminton</div>
+
+<div class="amenity">🏏 Cricket Ground / Play Area</div>
+
+<div class="amenity">🏊 Swimming Pool</div>
+
+<div class="amenity">🍽️ Restaurant</div>
+
+<div class="amenity">🔥 Barbecue Friendly</div>
+
+</div>
+
+</section>
+
+<!-- FOOD -->
+
+<section>
+
+<div class="section-title">
+
+<h2>Dining Experience</h2>
+
+<p>Fresh homemade meals with coastal flavours</p>
+
+</div>
+
+<div class="about">
+
+<img src="images/dining.jpeg">
+
+<div class="about-text">
+
+<h3>Premium Homemade Food 🍽️</h3>
+
+<p>
+Enjoy delicious homemade food including fresh fish,
+perfect chicken & mutton meals, outdoor seating,
+garden dining and peaceful luxury ambience.
+</p>
+
+<br>
+
+<p>
+Food charges will be according to menu pricing.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PERFECT FOR -->
+
+<section class="dark">
+
+<div class="section-title">
+
+<h2>Perfect For</h2>
+
+<p>Create unforgettable memories</p>
+
+</div>
+
+<div class="amenities">
+
+<div class="amenity">👨‍👩‍👧 Family Getaways</div>
+
+<div class="amenity">🎉 Birthday Celebrations</div>
+
+<div class="amenity">💍 Anniversary Events</div>
+
+<div class="amenity">🌸 Haldi & Mehendi Functions</div>
+
+<div class="amenity">👶 Baby Showers</div>
+
+<div class="amenity">🏢 Corporate Retreats</div>
+
+<div class="amenity">🍻 Friends Weekend Trips</div>
+
+<div class="amenity">🌴 Offsite Meetups</div>
+
+</div>
+
+</section>
+
+<!-- ATTRACTIONS -->
+
+<section>
+
+<div class="section-title">
+
+<h2>Nearby Attractions</h2>
+
+<p>Explore the beauty around Alibag</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="images/kihimbeach.jpeg">
+
+<div class="card-content">
+
+<h3>Kihim Beach</h3>
+
+<p>Only 15 minutes away</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/alibagbeach.jpeg">
+
+<div class="card-content">
+
+<h3>Alibag Beach</h3>
+
+<p>15 minutes away</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/mandwabeach.jpeg">
+
+<div class="card-content">
+
+<h3>Mandwa Jetty</h3>
+
+<p>30 minutes away</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="section-title">
+
+<h2>Resort Gallery</h2>
+
+<p>Experience Shrivan Resort luxury</p>
+
+</div>
+
+<div class="gallery">
+
+<img src="images/room1.jpeg">
+<img src="images/room2.jpeg">
+<img src="images/bedroom.jpeg">
+<img src="images/pool.jpeg">
+<img src="images/dining.jpeg">
+<img src="images/badminton.jpeg">
+<img src="images/sea.jpeg">
+<img src="images/gazebo.jpeg">
+<img src="images/lawn.jpeg">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Book Your Stay Now 📞</h2>
+
+<p>📍 At-Parhur, Karmale, Alibag</p>
+
+<p>🧑‍🧑‍🧒‍🧒 Capacity: 40–50 Guests</p>
+
+<p>📞 8280003400</p>
+
+<p>📞 8282003400</p>
+
+<br>
+
+<a href="tel:8280003400"
+class="btn btn-primary">
+Call For Booking
+</a>
+
+</section>
+
+<!-- POLICY -->
+
+<section>
+
+<div class="section-title">
+
+<h2>Resort Policy</h2>
+
+</div>
+
+<p style="text-align:center; max-width:900px; margin:auto; line-height:1.9; color:#666;">
+
+The guest/signing guests will be liable for any damages caused to the resort or its properties.
+
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Shrivan Resort | Luxury Stay Near Alibag 🌴
+
+</footer>
+
+</body>
+
+</html>
